@@ -1,14 +1,14 @@
-import {createBrowserRouter} from "react-router-dom"
+import {createHashRouter} from "react-router-dom"
 import Layout from "./Layout.tsx"
-import paths, {BASE_PATH} from "./paths.ts"
+import paths from "./paths.ts"
 import Home from "./routes"
 import EmissionsByLocation from "./routes/EmissionsByLocation"
 import FuelTypes from "./routes/FuelTypes"
 import TotalEmissions from "./routes/TotalEmissions"
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: BASE_PATH,
+    path: "/",
     element: <Layout />,
     children: [
       {

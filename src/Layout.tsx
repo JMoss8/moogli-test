@@ -2,7 +2,7 @@ import {Link, Outlet, useLocation} from "react-router-dom"
 import {twMerge} from "tailwind-merge"
 import {HomeIcon} from "@heroicons/react/24/outline"
 import logoSrc from "./assets/logo.svg"
-import paths, {BASE_PATH} from "./paths.ts"
+import paths from "./paths.ts"
 
 const links = [
   {
@@ -26,7 +26,7 @@ const Layout = () => {
       <aside className={"fixed flex h-full w-72 grow flex-col bg-gray-900"}>
         <nav className={"flex flex-col gap-2 p-4"}>
           <Link
-            to={BASE_PATH}
+            to={"/"}
             title={"Navigate Home"}
             className={
               "group m-auto w-16 rounded-xl bg-gray-900 p-2 text-gray-300 transition-colors hover:bg-gray-800 hover:text-white"
@@ -37,7 +37,7 @@ const Layout = () => {
           </Link>
 
           {links.map(link => {
-            const isCurrent = pathname === link.to
+            const isCurrent = pathname === "/" + link.to
             return (
               <Link
                 key={link.to}
