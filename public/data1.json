@@ -1,0 +1,92 @@
+[
+  {
+    "Location": "Barcelona",
+    "key": "CO2 (in kg)",
+    "value": 9800
+  },
+  {
+    "Location": "Barcelona",
+    "key": "CH4 (in kg)",
+    "value": 125
+  },
+  {
+    "Location": "Barcelona",
+    "key": "N2O (in kg)",
+    "value": 75
+  },
+  {
+    "Location": "Valencia",
+    "key": "CO2 (in kg)",
+    "value": 7920
+  },
+  {
+    "Location": "Valencia",
+    "key": "CH4 (in kg)",
+    "value": 75
+  },
+  {
+    "Location": "Valencia",
+    "key": "N2O (in kg)",
+    "value": 5
+  },
+  {
+    "Location": "Bilbao",
+    "key": "CO2 (in kg)",
+    "value": 5500
+  },
+  {
+    "Location": "Bilbao",
+    "key": "CH4 (in kg)",
+    "value": 300
+  },
+  {
+    "Location": "Bilbao",
+    "key": "N2O (in kg)",
+    "value": 200
+  },
+  {
+    "Location": "Madrid",
+    "key": "CO2 (in kg)",
+    "value": 10000
+  },
+  {
+    "Location": "Madrid",
+    "key": "CH4 (in kg)",
+    "value": 1500
+  },
+  {
+    "Location": "Madrid",
+    "key": "N2O (in kg)",
+    "value": 500
+  },
+  {
+    "Location": "Zaragoza",
+    "key": "CO2 (in kg)",
+    "value": 3300
+  },
+  {
+    "Location": "Zaragoza",
+    "key": "CH4 (in kg)",
+    "value": 500
+  },
+  {
+    "Location": "Zaragoza",
+    "key": "N2O (in kg)",
+    "value": 200
+  },
+  {
+    "Location": "Malaga",
+    "key": "CO2 (in kg)",
+    "value": 1750
+  },
+  {
+    "Location": "Malaga",
+    "key": "CH4 (in kg)",
+    "value": 225
+  },
+  {
+    "Location": "Malaga",
+    "key": "N2O (in kg)",
+    "value": 25
+  }
+]

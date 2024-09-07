@@ -1,0 +1,42 @@
+[
+  {
+    "Main fuel type": "Solid fossil fuel",
+    "key": "Coal Tar",
+    "value": 10000
+  },
+  {
+    "Main fuel type": "Solid fossil fuel",
+    "key": "Coke oven coke",
+    "value": 5000
+  },
+  {
+    "Main fuel type": "Liquid fossil fuel",
+    "key": "Natural gas liquids",
+    "value": 13000
+  },
+  {
+    "Main fuel type": "Liquid fossil fuel",
+    "key": "Gas/Diesel oil",
+    "value": 10000
+  },
+  {
+    "Main fuel type": "Liquid fossil fuel",
+    "key": "Motor gasoline",
+    "value": 7000
+  },
+  {
+    "Main fuel type": "Gaseous fossil fuel",
+    "key": "Natural gas",
+    "value": 25000
+  },
+  {
+    "Main fuel type": "Biomass",
+    "key": "Wood waste",
+    "value": 3000
+  },
+  {
+    "Main fuel type": "Biomass",
+    "key": "Landfill gas",
+    "value": 2000
+  }
+]

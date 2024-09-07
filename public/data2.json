@@ -1,0 +1,62 @@
+[
+  {
+    "Scope": "Scope 1",
+    "key": "2020",
+    "value": 15000
+  },
+  {
+    "Scope": "Scope 1",
+    "key": "2021",
+    "value": 10000
+  },
+  {
+    "Scope": "Scope 1",
+    "key": "2022",
+    "value": 11000
+  },
+  {
+    "Scope": "Scope 1",
+    "key": "2023",
+    "value": 9800
+  },
+  {
+    "Scope": "Scope 2",
+    "key": "2020",
+    "value": 6400
+  },
+  {
+    "Scope": "Scope 2",
+    "key": "2021",
+    "value": 8000
+  },
+  {
+    "Scope": "Scope 2",
+    "key": "2022",
+    "value": 6400
+  },
+  {
+    "Scope": "Scope 2",
+    "key": "2023",
+    "value": 7800
+  },
+  {
+    "Scope": "Scope 3",
+    "key": "2020",
+    "value": 140000
+  },
+  {
+    "Scope": "Scope 3",
+    "key": "2021",
+    "value": 125000
+  },
+  {
+    "Scope": "Scope 3",
+    "key": "2022",
+    "value": 162000
+  },
+  {
+    "Scope": "Scope 3",
+    "key": "2023",
+    "value": 115000
+  }
+]
