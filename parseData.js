@@ -9,6 +9,7 @@ async function parseCSV(fileName, ignoredKeys) {
   const csvData = await fs.promises.readFile(path.join("datasets", fileName), "utf-8")
   const lines = csvData
     .trim()
+    .replaceAll("\r", "")
     .split("\n")
     .map(line => line.split(";"))
   const header = lines[0]
