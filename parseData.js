@@ -6,7 +6,7 @@ const filesToParse = ["data1", "data2", "data3"]
 const ignoredKeys = ["Total"]
 
 async function parseCSV(fileName, ignoredKeys) {
-  const csvData = await fs.promises.readFile(path.join("db", fileName), "utf-8")
+  const csvData = await fs.promises.readFile(path.join("datasets", fileName), "utf-8")
   const lines = csvData
     .trim()
     .split("\n")
