@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom"
 import Layout from "./Layout.tsx"
-import paths from "./paths.ts"
+import paths, {BASE_PATH} from "./paths.ts"
 import Home from "./routes"
 import EmissionsByLocation from "./routes/EmissionsByLocation"
 import FuelTypes from "./routes/FuelTypes"
@@ -8,7 +8,7 @@ import TotalEmissions from "./routes/TotalEmissions"
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: BASE_PATH,
     element: <Layout />,
     children: [
       {
