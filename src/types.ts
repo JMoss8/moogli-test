@@ -2,6 +2,7 @@ import {Dispatch, SetStateAction} from "react"
 
 export type TChartProps<D> = {
   data: D[] | undefined
+  filters?: string[]
   setFilters: Dispatch<SetStateAction<string[] | undefined>>
 }
 

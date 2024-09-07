@@ -18,7 +18,7 @@ const FuelTypes = () => {
     getEmissionsByLocation().then(data => setData(data))
   }, [])
 
-  const setFilters = useFilters(data, filterData, setTotal)
+  const {setFilters} = useFilters(data, filterData, setTotal)
 
   return (
     <ChartLayout

@@ -13,13 +13,14 @@ export const aggregateForTooltip =
     return `${id} total ${sum?.toLocaleString()}`
   }
 
-export const useOnChartReady = (setFilters: TChartProps<unknown>["setFilters"]) =>
+export const useOnChartReady = (setFilters: TChartProps<unknown>["setFilters"], callback?: ({chart}: Chart) => void) =>
   useCallback(
     ({chart}: Chart) => {
+      callback?.(chart)
       chart.on("legend:filter", (event: {data: {values: string[]}}) => setFilters([...event.data.values]))
       chart.on("legend:reset", () => setFilters(undefined))
     },
-    [setFilters]
+    [callback, setFilters]
   )
 
 export const useFilters = <T>(
@@ -34,5 +35,5 @@ export const useFilters = <T>(
     setTotal(filterData(data, filters))
   }, [filters, data, setTotal, filterData])
 
-  return setFilters
+  return {filters, setFilters}
 }
