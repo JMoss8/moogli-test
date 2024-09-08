@@ -5,7 +5,11 @@ export default {
     fontFamily: {
       mono: ["Chivo Mono", "monospace"],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        extreme: "25px 0 150px black",
+      },
+    },
   },
   plugins: [],
 }
