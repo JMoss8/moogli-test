@@ -26,8 +26,9 @@ const FuelTypes = () => {
       chart={<FuelTypesChart data={data} filters={filters} setFilters={setFilters} />}
       label={"Fuel types"}
     >
-      This graph shows the main fuel types used and in detail what specific types of fuel how much emissions produce.
-      You can filter by main fuel types. The grand total shows all the emissions produced across selected fuel types.
+      This graph shows the main fuel types used and provides details on how much emissions each specific type of fuel
+      produced. You can filter by the main fuel types. The grand total displays all the emissions produced across the
+      selected fuel types.
     </ChartLayout>
   )
 }

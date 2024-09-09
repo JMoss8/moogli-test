@@ -26,8 +26,8 @@ const TotalEmissions = () => {
       chart={<TotalEmissionsChart setFilters={setFilters} data={data} />}
       label={"Total emissions"}
     >
-      This graph shows the quantity of CO<sub>2</sub> emissions (in kg) divided to scopes your company produced in last
-      several years. Grand total shows sum of all emissions produced filtered by scopes.
+      This graph shows the quantity of CO<sub>2</sub> emissions (in kg) divided by scopes that your company has produced
+      over the past several years. The grand total displays the sum of all emissions produced for selected scopes.
     </ChartLayout>
   )
 }

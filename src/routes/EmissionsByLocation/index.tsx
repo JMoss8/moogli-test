@@ -26,7 +26,9 @@ const FuelTypes = () => {
       chart={<EmissionsByLocationChart data={data} setFilters={setFilters} />}
       label={"Emissions by location"}
     >
-      TODO
+      This graph visualizes the total CO<sub>2</sub>e emissions of the company's locations and splits them into the
+      three main greenhouse gases. The grand total shows the sum of CO<sub>2</sub>e emissions, which can be filtered by
+      the type of greenhouse gas.
     </ChartLayout>
   )
 }
