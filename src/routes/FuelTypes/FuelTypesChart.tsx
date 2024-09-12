@@ -1,13 +1,12 @@
-import {ComponentProps, useCallback, useMemo, useState} from "react"
+import {ComponentProps, useMemo, useRef, useState} from "react"
 import {Sunburst} from "@ant-design/charts"
 import {useOnChartReady} from "../../components/utils.ts"
 import {IFuelTypes, TChartProps} from "../../types.ts"
 import CustomLegend from "./CustomLegend.tsx"
 
 const colors = ["red", "orange", "blue", "green"]
-const colorMap: Record<string, string> = {} // shared among all instances of FuelTypesChart
 
-const config: ComponentProps<typeof Sunburst> = {
+const baseConfig: ComponentProps<typeof Sunburst> = {
   colorField: "Main fuel type",
   innerRadius: 0.4,
   tooltip: false,
@@ -24,13 +23,6 @@ const config: ComponentProps<typeof Sunburst> = {
   style: {
     stroke: "#fff",
     radius: 10,
-    fill: (d: {"Main fuel type": string}, i: number) => {
-      const key = d["Main fuel type"]
-      if (!(key in colorMap)) {
-        colorMap[key] = colors[i]
-      }
-      return colorMap[key]
-    },
   },
   interaction: false,
 }
@@ -38,10 +30,10 @@ const config: ComponentProps<typeof Sunburst> = {
 type TDataType = IFuelTypes & {name: string}
 
 const FuelTypesChart = ({data, filters, setFilters}: TChartProps<IFuelTypes>) => {
-  const [colorMapState, setColorMapState] = useState<typeof colorMap>({})
+  const [count, setCount] = useState(0)
+  const colorMap = useRef<Record<string, string>>({})
 
-  const callback = useCallback(() => setColorMapState(colorMap), [])
-  const onReady = useOnChartReady(setFilters, callback)
+  const onReady = useOnChartReady(setFilters)
 
   const dataProcessed = useMemo(
     () =>
@@ -62,10 +54,27 @@ const FuelTypesChart = ({data, filters, setFilters}: TChartProps<IFuelTypes>) =>
     [data, filters]
   )
 
+  const config = useMemo(
+    () => ({
+      ...baseConfig,
+      style: {
+        ...baseConfig.style,
+        fill: (d: {"Main fuel type": string}, index: number) => {
+          const type = d["Main fuel type"]
+          if (!(type in colorMap.current)) {
+            colorMap.current[type] = colors[index % colors.length]
+            setCount(old => old + 1)
+          }
+          return colorMap.current[type]
+        },
+      },
+    }),
+    []
+  )
+
   return (
     <>
-      <CustomLegend filters={filters} setFilters={setFilters} colorMapState={colorMapState} />
-
+      {count >= colors.length && <CustomLegend filters={filters} setFilters={setFilters} colorMap={colorMap.current} />}
       <Sunburst {...config} data={{type: "inline", value: dataProcessed}} onReady={onReady} />
     </>
   )

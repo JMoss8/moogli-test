@@ -121,6 +121,10 @@ const Home = () => {
                   The data is served from the <code>/public</code> folder. I am fetching it from there, which is meant
                   to mimic a back-end-like a REST API with GET requests.
                 </li>
+                <li>
+                  Set up code splitting so the charts data are loaded only when needed decreasing the main bundle size
+                  improving load times.
+                </li>
               </ul>
             </div>
             <div className={"rounded-lg border border-red-200 bg-red-50 bg-opacity-35 px-4 py-2"}>
@@ -140,6 +144,10 @@ const Home = () => {
                     <code>use</code>
                   </a>{" "}
                   API but it did not work as I'd expect.
+                </li>
+                <li>
+                  There was a bug in the CustomLegend file which caused it not being rendered properly. I fixed it using
+                  an useRef, other way would be to use a global state store or the local storage.
                 </li>
               </ul>
             </div>
